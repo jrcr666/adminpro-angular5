@@ -10,8 +10,7 @@ import { PagesModule } from './pages/pages.module';
 
 // Services
 
-import { SharedService } from './services/shared.service';
-import { SidebarService } from './services/sidebar.service';
+import { ServicesModule } from './services/services.module';
 
 // Components
 
@@ -31,12 +30,10 @@ import { RegisterComponent } from './login/register.component';
     HttpModule,
     FormsModule,
     ReactiveFormsModule,
-    PagesModule
+    PagesModule,
+    ServicesModule
   ],
-  providers: [
-    SharedService,
-    SidebarService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
