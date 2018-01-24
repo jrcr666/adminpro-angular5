@@ -8,6 +8,7 @@ import {
 	SettingsService,
 	SidebarService,
 	SharedService,
+	SubirArchivoService,
 	UsuarioService
 } from './services.index';
 
@@ -23,6 +24,7 @@ import {
 		SettingsService,
 		SharedService,
 		SidebarService,
+		SubirArchivoService,
 		UsuarioService
 	],
 	exports: []

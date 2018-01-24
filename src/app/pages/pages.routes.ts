@@ -1,5 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 
+import { LoginGuardGuard } from './../services/services.index';
+
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
@@ -7,8 +9,8 @@ import { Graficas1Component } from './graficas1/graficas1.component';
 import { PagesComponent } from './pages.component';
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { ProfileComponent } from './profile/profile.component';
 
-import { LoginGuardGuard } from './../services/services.index';
 const ROUTES: Routes = [
 	{
 		path: '',
@@ -21,6 +23,7 @@ const ROUTES: Routes = [
 			{ path: 'graficas1', component: Graficas1Component, data: { titulo: 'Gráficas' } },
 			{ path: 'promesas', component: PromesasComponent, data: { titulo: 'Promesas' } },
 			{ path: 'rxjs', component: RxjsComponent, data: { titulo: 'RxJs' } },
+			{ path: 'profile', component: ProfileComponent, data: { titulo: 'Perfil de usuario' } },
 			{ path: '', pathMatch: 'full', redirectTo: '/dashboard' },
 		]
 	},

@@ -12,6 +12,10 @@ import { PagesModule } from './pages/pages.module';
 
 import { ServicesModule } from './services/services.module';
 
+// Pipes
+
+import { PipesModule } from './pipes/pipes.module';
+
 // Components
 
 import { AppComponent } from './app.component';
@@ -31,6 +35,7 @@ import { RegisterComponent } from './login/register.component';
     FormsModule,
     ReactiveFormsModule,
     PagesModule,
+    PipesModule,
     ServicesModule
   ],
   providers: [],
