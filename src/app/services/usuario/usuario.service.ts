@@ -35,7 +35,17 @@ export class UsuarioService {
 		this.usuario = JSON.parse(localStorage.getItem('usuario'));
 	}
 
-	public actualizarUsusario(usuario: Usuario) {
+	public cargarUsuarios(desde: number = 0) {
+
+		let url = URL_SERVICIOS + '/usuario?desde=' + desde;
+
+		return this.http.get(url)
+			.map((resp: any) => {
+				return resp;
+			});
+	}
+
+	public actualizarUsuario(usuario: Usuario) {
 
 		let url = URL_SERVICIOS + '/usuario/' + usuario._id + '?token=' + this.token;
 
@@ -44,11 +54,22 @@ export class UsuarioService {
 		})
 		return this.http.put(url, usuario)
 			.map((resp: any) => {
-				let usuarioDB: Usuario = resp.usuario;
-				this.guardarStorage(usuarioDB._id, this.token, usuarioDB);
+
+				if (usuario._id === this.usuario._id) {
+					let usuarioDB: Usuario = resp.usuario;
+					this.guardarStorage(usuarioDB._id, this.token, usuarioDB);
+				}
 				swal('Usuario actualizado', usuario.nombre, 'success');
 				return true;
 			});
+	}
+
+	public buscarrUsuarios(termino: string) {
+
+		let url = URL_SERVICIOS + '/busqueda/coleccion/usuarios/' + termino;
+
+		return this.http.get(url)
+			.map((resp: any) => resp.usuarios);
 	}
 
 	public cambiarImagen(archivo: File, id: string) {
@@ -74,6 +95,21 @@ export class UsuarioService {
 				swal('Usuario creado', usuario.email, 'success');
 				return resp.usuario;
 			})
+	}
+
+	public eliminarUsuario(id: string) {
+
+		let url = URL_SERVICIOS + '/usuario/' + id + '?token=' + this.token;
+
+		return this.http.delete(url)
+			.map((resp: any) => {
+				swal(
+					'Usuario eliminado',
+					'El usuario se eliminó correctamente',
+					'success'
+				)
+				return true;
+			});
 	}
 
 	public logout() {

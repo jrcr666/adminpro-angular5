@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { UsuarioService } from './../../services/services.index';
 import { Usuario } from './../../models/usuario.model';
-import swal from 'sweetalert2
+import swal from 'sweetalert2';
 
 @Component({
 	selector: 'app-profile',
@@ -27,7 +27,7 @@ export class ProfileComponent implements OnInit {
 		this.usuario.nombre = usuario.nombre;
 		this.usuario.email = this.usuario.google ? this.usuario.email : usuario.email;
 
-		this.usuarioService.actualizarUsusario(this.usuario)
+		this.usuarioService.actualizarUsuario(this.usuario)
 			.subscribe(resp => {
 				console.log(resp);
 			})

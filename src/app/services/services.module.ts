@@ -5,9 +5,10 @@ import { HttpClientModule } from '@angular/common/http';
 import {
 	LoginGuardGuard,
 
+	ModalUploadService,
 	SettingsService,
-	SidebarService,
 	SharedService,
+	SidebarService,
 	SubirArchivoService,
 	UsuarioService
 } from './services.index';
@@ -21,6 +22,7 @@ import {
 	providers: [
 		LoginGuardGuard,
 
+		ModalUploadService,
 		SettingsService,
 		SharedService,
 		SidebarService,

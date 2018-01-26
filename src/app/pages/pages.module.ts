@@ -25,19 +25,23 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { ProfileComponent } from './profile/profile.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
 
 @NgModule({
 	declarations: [
-		PagesComponent,
-		DashboardComponent,
-		ProgressComponent,
-		Graficas1Component,
-		IncrementadorComponent,
-		GraficoDonaComponent,
 		AccountSettingsComponent,
+		DashboardComponent,
+		Graficas1Component,
+		GraficoDonaComponent,
+		IncrementadorComponent,
+		ModalUploadComponent,
+		PagesComponent,
+		ProfileComponent,
+		ProgressComponent,
 		PromesasComponent,
 		RxjsComponent,
-		ProfileComponent
+		UsuariosComponent
 	],
 	imports: [
 		BrowserModule,
@@ -52,12 +56,13 @@ import { ProfileComponent } from './profile/profile.component';
 
 	],
 	exports: [
-		PagesComponent,
+		AccountSettingsComponent,
 		DashboardComponent,
-		ProgressComponent,
 		Graficas1Component,
 		IncrementadorComponent,
-		AccountSettingsComponent
+		ModalUploadComponent,
+		PagesComponent,
+		ProgressComponent
 	]
 })
 export class PagesModule { }
