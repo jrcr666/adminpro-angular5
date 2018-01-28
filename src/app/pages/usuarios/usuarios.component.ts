@@ -103,7 +103,7 @@ export class UsuariosComponent implements OnInit {
 
 		console.log(termino);
 		this.cargando = true;
-		this.usuarioService.buscarrUsuarios(termino)
+		this.usuarioService.buscarUsuarios(termino)
 			.subscribe(usuarios => {
 				console.log(usuarios)
 				this.usuarios = usuarios,

@@ -27,6 +27,9 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
+import { MedicosComponent } from './medicos/medicos.component';
+import { HospitalesComponent } from './hospitales/hospitales.component';
+import { MedicoComponent } from './medicos/medico.component';
 
 @NgModule({
 	declarations: [
@@ -35,13 +38,16 @@ import { ModalUploadComponent } from '../components/modal-upload/modal-upload.co
 		Graficas1Component,
 		GraficoDonaComponent,
 		IncrementadorComponent,
+		MedicosComponent,
 		ModalUploadComponent,
 		PagesComponent,
 		ProfileComponent,
 		ProgressComponent,
 		PromesasComponent,
 		RxjsComponent,
-		UsuariosComponent
+		UsuariosComponent,
+		HospitalesComponent,
+		MedicoComponent
 	],
 	imports: [
 		BrowserModule,
@@ -60,6 +66,7 @@ import { ModalUploadComponent } from '../components/modal-upload/modal-upload.co
 		DashboardComponent,
 		Graficas1Component,
 		IncrementadorComponent,
+		MedicosComponent,
 		ModalUploadComponent,
 		PagesComponent,
 		ProgressComponent

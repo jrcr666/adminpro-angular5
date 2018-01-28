@@ -73,7 +73,7 @@ export class RegisterComponent implements OnInit {
 			this.forma.value.password,
 		);
 
-		this.usuarioService.crearUsusario(usuario)
+		this.usuarioService.crearUsuario(usuario)
 			.subscribe(resp => this.router.navigate(['/login']));
 	}
 }

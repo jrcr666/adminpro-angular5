@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import {
 	LoginGuardGuard,
 
+	HospitalService,
+	MedicoService,
 	ModalUploadService,
 	SettingsService,
 	SharedService,
@@ -22,12 +24,14 @@ import {
 	providers: [
 		LoginGuardGuard,
 
+		HospitalService,
+		MedicoService,
 		ModalUploadService,
 		SettingsService,
 		SharedService,
 		SidebarService,
 		SubirArchivoService,
-		UsuarioService
+		UsuarioService,
 	],
 	exports: []
 })

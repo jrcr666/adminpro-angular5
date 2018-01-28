@@ -64,7 +64,7 @@ export class UsuarioService {
 			});
 	}
 
-	public buscarrUsuarios(termino: string) {
+	public buscarUsuarios(termino: string) {
 
 		let url = URL_SERVICIOS + '/busqueda/coleccion/usuarios/' + termino;
 
@@ -85,7 +85,7 @@ export class UsuarioService {
 			})
 	}
 
-	public crearUsusario(usuario: Usuario) {
+	public crearUsuario(usuario: Usuario) {
 
 		let headers = new HttpHeaders({
 			'Content-Type': 'application/json'

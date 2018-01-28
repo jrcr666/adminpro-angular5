@@ -21,12 +21,10 @@ export class ModalUploadComponent implements OnInit {
 
 	constructor(
 		public modalUploadService: ModalUploadService,
-		public subirArchivoService: SubirArchivoService,
-		public usuarioService: UsuarioService
+		public subirArchivoService: SubirArchivoService
 	) { }
 
 	ngOnInit() {
-		//this.usuario = this.usuarioService.usuario;
 	}
 
 	seleccionImagen(archivo) {
