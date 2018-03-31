@@ -30,6 +30,7 @@ import { ModalUploadComponent } from '../components/modal-upload/modal-upload.co
 import { MedicosComponent } from './medicos/medicos.component';
 import { HospitalesComponent } from './hospitales/hospitales.component';
 import { MedicoComponent } from './medicos/medico.component';
+import { BusquedaComponent } from './busqueda/busqueda.component';
 
 @NgModule({
 	declarations: [
@@ -47,7 +48,8 @@ import { MedicoComponent } from './medicos/medico.component';
 		RxjsComponent,
 		UsuariosComponent,
 		HospitalesComponent,
-		MedicoComponent
+		MedicoComponent,
+		BusquedaComponent
 	],
 	imports: [
 		BrowserModule,

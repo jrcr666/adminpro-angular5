@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
 			this.usuarioService.loginGoogle(token)
 			.subscribe(
 			correcto => {
-				swal('Usuario registrado', '', 'success');
+				swal('Usuario correcto', '', 'success');
 				(<any>window).location = '#/dashboard';
 				//this._router.navigate(['/dashboard'])
 			},
@@ -72,7 +72,7 @@ export class LoginComponent implements OnInit {
 
 		this.usuarioService.login(usuario, forma.value.recuerdame).subscribe(
 			correcto => {
-				swal('Usuario registrado', usuario.email, 'success');
+				swal('Usuario correcto', usuario.email, 'success');
 				this._router.navigate(['/dashboard'])
 			},
 			error => {

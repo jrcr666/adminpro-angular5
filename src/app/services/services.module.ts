@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 import {
+	AdminGuard,
 	LoginGuardGuard,
 
 	HospitalService,
@@ -22,6 +23,7 @@ import {
 		CommonModule
 	],
 	providers: [
+		AdminGuard,
 		LoginGuardGuard,
 
 		HospitalService,
